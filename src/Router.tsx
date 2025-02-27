@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+import Home from "./page/home";
 import { DefaultLayout } from "./layouts/defaultLayout";
-import Home from "./page/checkout";
 
 export const Router = () => {
   return (

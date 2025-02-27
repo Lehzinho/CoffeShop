@@ -1,11 +1,12 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useReducer } from "react";
+import { cartReducer, CartState } from "../reducers/shoppingCart/reducer";
 
 interface ShoppingCartProviderProps {
-  childen: ReactNode;
+  children: ReactNode;
 }
 
 interface ShoppingCartContextData {
-  cafe: string;
+  cart: CartState;
 }
 
 const ShoppingCartContext = createContext<ShoppingCartContextData>(
@@ -13,12 +14,15 @@ const ShoppingCartContext = createContext<ShoppingCartContextData>(
 );
 
 export const ShoppingCartProvider = ({
-  childen,
+  children,
 }: ShoppingCartProviderProps) => {
-  const [cafe] = useState("");
+  const [cart, dispach] = useReducer(cartReducer, {
+    order: [],
+    total: 0,
+  });
   return (
-    <ShoppingCartContext.Provider value={{ cafe }}>
-      {childen}
+    <ShoppingCartContext.Provider value={{ cart }}>
+      {children}
     </ShoppingCartContext.Provider>
   );
 };

@@ -1,7 +1,7 @@
-import React from "react";
+import * as S from "./styles";
 
-function Home() {
-  return <div></div>;
+function Checkout() {
+  return <S.Checkout></S.Checkout>;
 }
 
-export default Home;
+export default Checkout;

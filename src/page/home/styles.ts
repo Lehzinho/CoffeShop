@@ -1,3 +1,3 @@
 import styled from "styled-components";
 
-export const Checkout = styled.div``;
+export const Home = styled.div``;

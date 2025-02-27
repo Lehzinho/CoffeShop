@@ -8,14 +8,12 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
-    background:${({ theme }) => theme["gray-900"]};;
-    color: ${({ theme }) => theme["gray-300"]};;
-    -webkit-font-smoothing: antialiased;
+        background-color: ${({ theme }) => theme["base-background"]};;
+        -webkit-font-smoothing: antialiased;
     }
 
     :focus{
         outline: 0;
-        box-shadow: 0 0 0 2px ${({ theme }) => theme["green-500"]}; ;
     }
 
     body, input, textarea, button{

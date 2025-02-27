@@ -1,16 +1,19 @@
 import { ThemeProvider } from "styled-components";
-import { defaultTheme } from "./styles/themes/default";
+import { DefaultTheme } from "./styles/themes/default";
 import { GlobalStyle } from "./styles/glogal";
 import { Router } from "./Router";
 import { BrowserRouter } from "react-router-dom";
+import { ShoppingCartProvider } from "./context/ShoppingCart";
 
-function App() {
-  <ThemeProvider theme={defaultTheme}>
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
-    <GlobalStyle />
-  </ThemeProvider>;
+export function App() {
+  return (
+    <ThemeProvider theme={DefaultTheme}>
+      <ShoppingCartProvider>
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
+        <GlobalStyle />
+      </ShoppingCartProvider>
+    </ThemeProvider>
+  );
 }
-
-export default App;

@@ -1,4 +1,5 @@
-export const defaultTheme = {
+export const DefaultTheme = {
+  "base-background": "#FAFAFA",
   "yellow-dark": "#C47F17",
   yellow: "#DBAC2C",
   "yellow-light": "#F1E9C9",
