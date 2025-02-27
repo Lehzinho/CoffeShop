@@ -5,6 +5,7 @@ export const Header = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 2rem 10rem;
+  margin-bottom: 5.75rem;
   & > div {
     display: flex;
     gap: 0.75rem;
