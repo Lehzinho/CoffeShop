@@ -16,7 +16,7 @@ export const Header = styled.nav`
       font-size: 0.875rem;
       color: ${({ theme }) => theme["purple-dark"]};
       background-color: ${({ theme }) => theme["purple-light"]};
-      border-radius: 0.5rem;
+      border-radius: 0.375rem;
     }
   }
 `;
