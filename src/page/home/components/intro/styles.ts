@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Intro = styled.div`
   display: flex;
   justify-content: center;
-  max-width: 110.9375rem;
   gap: 3.5rem;
+  margin: 0 auto;
   & > div {
     max-width: 36.75rem;
     h1 {

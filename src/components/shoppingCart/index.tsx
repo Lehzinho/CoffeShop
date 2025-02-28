@@ -2,7 +2,7 @@ import * as S from "./style";
 import { ShoppingCart as Cart } from "@phosphor-icons/react";
 
 interface ShoppingCartProps {
-  type: "yellow" | "purple";
+  type?: "yellow" | "purple";
   items?: number;
 }
 

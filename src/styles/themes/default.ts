@@ -8,6 +8,7 @@ export const DefaultTheme = {
   "purple-light": "#EBE5F9",
   "base-title": "#272221",
   "base-subtitle": "#403937",
+  "base-text-light": "#8D8686",
   "base-text": "#574F4D",
   "base-button": "#E6E5E5",
   "base-input": "#EDEDED",
