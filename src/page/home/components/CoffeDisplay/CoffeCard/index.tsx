@@ -12,7 +12,7 @@ interface CoffeCardProps {
 }
 
 export const CoffeCard = (props: CoffeCardProps) => {
-  const { attributes, description, img, price, title } = props;
+  const { attributes, description, img, price, title, id } = props;
 
   return (
     <S.CoffeCard>
@@ -20,7 +20,7 @@ export const CoffeCard = (props: CoffeCardProps) => {
       <CoffeAttribute attributes={attributes} />
       <h1>{title}</h1>
       <p>{description}</p>
-      <CoffeOrder price={price} />
+      <CoffeOrder price={price} id={id} />
     </S.CoffeCard>
   );
 };

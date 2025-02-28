@@ -1,5 +1,5 @@
 import { CoffeCard } from "./CoffeCard";
-import { coffeArray } from "./coffes";
+import { coffeArray } from "@/assets/arrays/coffesArray";
 import * as S from "./styles";
 
 export const CoffeDisplay = () => {
@@ -8,7 +8,7 @@ export const CoffeDisplay = () => {
       <h1>Nossos cafés</h1>
       <div className="coffeCardContainer">
         {coffeArray.map((coffe) => (
-          <CoffeCard {...coffe} />
+          <CoffeCard key={coffe.id} {...coffe} />
         ))}
       </div>
     </S.CoffeDisplay>

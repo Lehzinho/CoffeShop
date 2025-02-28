@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import intro from "@/assets/HeroImg.png";
+import intro from "@/assets/images/HeroImg.png";
 
 import {
   Coffee,

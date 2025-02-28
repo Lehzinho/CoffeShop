@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import * as S from "./styles";
-import Logo from "@/assets/Logo.svg?react";
+import Logo from "@/assets/images/Logo.svg?react";
 import { MapPin } from "@phosphor-icons/react";
 import { ShoppingCart } from "../../../components/shoppingCart";
 export const Header = () => {

@@ -1,5 +1,7 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, ReactNode, useContext, useReducer } from "react";
 import { cartReducer, CartState } from "../reducers/shoppingCart/reducer";
+import { addNewCoffe, removeOldCoffe } from "@/reducers/shoppingCart/actions";
 
 interface ShoppingCartProviderProps {
   children: ReactNode;
@@ -7,6 +9,8 @@ interface ShoppingCartProviderProps {
 
 interface ShoppingCartContextData {
   cart: CartState;
+  addCoffe: (id: number) => void;
+  removeCoffe: (id: number) => void;
 }
 
 const ShoppingCartContext = createContext<ShoppingCartContextData>(
@@ -20,8 +24,17 @@ export const ShoppingCartProvider = ({
     order: [],
     total: 0,
   });
+
+  const addCoffe = (id: number) => {
+    dispach(addNewCoffe(id));
+  };
+
+  const removeCoffe = (id: number) => {
+    dispach(removeOldCoffe(id));
+  };
+
   return (
-    <ShoppingCartContext.Provider value={{ cart }}>
+    <ShoppingCartContext.Provider value={{ cart, addCoffe, removeCoffe }}>
       {children}
     </ShoppingCartContext.Provider>
   );

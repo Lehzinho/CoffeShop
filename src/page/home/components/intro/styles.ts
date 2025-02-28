@@ -4,20 +4,25 @@ export const Intro = styled.div`
   display: flex;
   justify-content: center;
   gap: 3.5rem;
+
   margin: 0 auto;
+
   & > div {
     max-width: 36.75rem;
+
     h1 {
       font-size: 3rem;
       font-family: "Baloo 2", sans-serif;
       line-height: 1.3;
       margin-bottom: 16px;
     }
+
     p {
       font-size: 1.25rem;
       margin-bottom: 4.125rem;
     }
   }
+
   .cardContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;

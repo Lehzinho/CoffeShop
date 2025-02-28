@@ -3,9 +3,10 @@ import { CoffeOrderQdt } from "./coffeOrderQdt";
 import { ShoppingCart } from "@/components/shoppingCart";
 interface CoffeOrderProps {
   price: number;
+  id: number;
 }
 
-export const CoffeOrder = ({ price }: CoffeOrderProps) => {
+export const CoffeOrder = ({ price, id }: CoffeOrderProps) => {
   const formattedPrice = new Intl.NumberFormat("pt-BR", {
     style: "decimal",
     minimumFractionDigits: 2,
@@ -18,7 +19,7 @@ export const CoffeOrder = ({ price }: CoffeOrderProps) => {
         R$ <span>{formattedPrice}</span>
       </p>
       <div>
-        <CoffeOrderQdt />
+        <CoffeOrderQdt id={id} />
         <ShoppingCart />
       </div>
     </S.CoffeOrder>
