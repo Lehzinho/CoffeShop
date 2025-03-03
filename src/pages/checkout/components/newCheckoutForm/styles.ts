@@ -6,6 +6,7 @@ export const NewCheckoutForm = styled.div`
   width: 448px;
   padding: 40px;
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 24px;
 
@@ -15,16 +16,80 @@ export const NewCheckoutForm = styled.div`
   hr {
     margin: 24px 0;
     stroke-width: 1px;
-    background-color: var(--Base-Button, #e6e5e5);
+    background-color: ${({ theme }) => theme["base-button"]};
+  }
+  .precoContainer {
+    width: 100%;
+    button {
+      all: unset;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      padding: 12px 8px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      align-self: stretch;
+
+      border-radius: 6px;
+      background: var(--Brand-Yellow, #dbac2c);
+
+      color: var(--Base-White, #fff);
+
+      /* Components/Button G */
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 160%; /* 22.4px */
+      text-transform: uppercase;
+    }
   }
 
   .coffeContainer {
     width: 100%;
+    overflow-y: auto;
+    max-height: 400px;
+    padding-right: 12px;
+    /* For WebKit Browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1; /* Light gray background */
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #888; /* Darker thumb */
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; /* Even darker on hover */
+    }
   }
   .row {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0.9375rem;
+
+    p {
+      text-align: right;
+      color: ${({ theme }) => theme["base-text"]};
+    }
+    p:first-child {
+      font-size: 14px;
+    }
+    p:nth-child(2) {
+      font-size: 16px;
+    }
+  }
+  .total {
+    p {
+      font-size: 20px !important;
+      font-weight: 700;
+    }
   }
 `;
 
@@ -34,7 +99,7 @@ export const CoffeCard = styled.div`
   justify-content: space-between;
 
   h1 {
-    color: var(--Base-Subtitle, #403937);
+    color: ${({ theme }) => theme["base-subtitle"]};
 
     font-size: 1rem;
     line-height: 130%;
@@ -46,15 +111,12 @@ export const CoffeCard = styled.div`
     height: 64;
   }
   & > p {
-    color: var(--Base-Text, #574f4d);
+    color: ${({ theme }) => theme["base-text"]};
     text-align: right;
 
-    /* Text/Bold M */
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 130%; /* 20.8px */
+    line-height: 130%;
   }
   .btnContainer {
     display: flex;
@@ -70,14 +132,14 @@ export const CoffeCard = styled.div`
       align-items: center;
       gap: 4px;
 
-      color: var(--Base-Text, #574f4d);
+      color: ${({ theme }) => theme["base-text"]};
 
       font-size: 0.75rem;
       line-height: 160%;
       text-transform: uppercase;
 
       border-radius: 6px;
-      background: var(--Base-Button, #e6e5e5);
+      background-color: ${({ theme }) => theme["base-button"]};
     }
   }
 `;

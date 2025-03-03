@@ -1,26 +1,29 @@
 import { CoffeOrderQdt } from "@/components/CoffeOrderQdt";
 import * as S from "./styles";
 import { ShoppingCart } from "@/components/shoppingCart";
+import { formatToDecimal } from "@/utils/formatDecimal";
+import { Link } from "react-router-dom";
+import { useShoppingCart } from "@/context/ShoppingCart";
 interface CoffeOrderProps {
   price: number;
   id: number;
 }
 
 export const CoffeOrder = ({ price, id }: CoffeOrderProps) => {
-  const formattedPrice = new Intl.NumberFormat("pt-BR", {
-    style: "decimal",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(price / 100);
+  const { cart } = useShoppingCart();
 
+  const cupsOfCoffes = cart.order.find((coffe) => coffe.id === id);
+  const amount = cupsOfCoffes ? cupsOfCoffes.quantidade : 0;
   return (
     <S.CoffeOrder>
       <p>
-        R$ <span>{formattedPrice}</span>
+        R$ <span>{formatToDecimal(price)}</span>
       </p>
       <div>
         <CoffeOrderQdt id={id} />
-        <ShoppingCart />
+        <Link to={cart.total > 0 ? "/checkout" : "/"}>
+          <ShoppingCart items={amount} />
+        </Link>
       </div>
     </S.CoffeOrder>
   );

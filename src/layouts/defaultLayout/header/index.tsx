@@ -3,7 +3,10 @@ import * as S from "./styles";
 import Logo from "@/assets/images/Logo.svg?react";
 import { MapPin } from "@phosphor-icons/react";
 import { ShoppingCart } from "../../../components/shoppingCart";
+import { useShoppingCart } from "@/context/ShoppingCart";
 export const Header = () => {
+  const { cart } = useShoppingCart();
+  const { items } = cart;
   return (
     <S.Header>
       <Logo />
@@ -13,7 +16,7 @@ export const Header = () => {
           Porto Alegre, RS
         </p>
         <NavLink to="/checkout">
-          <ShoppingCart type="yellow" />
+          <ShoppingCart items={items} type="yellow" />
         </NavLink>
       </div>
     </S.Header>

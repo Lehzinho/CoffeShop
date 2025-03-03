@@ -1,17 +1,15 @@
 import { useShoppingCart } from "@/context/ShoppingCart";
 import * as S from "./styles";
 import { CoffeCard } from "./coffeCard";
+import { formatToDecimal } from "@/utils/formatDecimal";
 
 export const NewCheckoutForm = () => {
   const { cart } = useShoppingCart();
 
   const { order, total } = cart;
 
-  const formattedPrice = new Intl.NumberFormat("pt-BR", {
-    style: "decimal",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(total / 100);
+  const precoEntrega = 375;
+
   return (
     <S.NewCheckoutForm>
       <div className="coffeContainer">
@@ -22,19 +20,21 @@ export const NewCheckoutForm = () => {
           </div>
         ))}
       </div>
-      <div className="row">
-        <p>total de items</p>
-        <p>R$ {formattedPrice}</p>
+      <div className="precoContainer">
+        <div className="row">
+          <p>Total de items</p>
+          <p>R$ {formatToDecimal(total)}</p>
+        </div>
+        <div className="row">
+          <p>Entrega</p>
+          <p>R$ {formatToDecimal(precoEntrega)}</p>
+        </div>
+        <div className="row total">
+          <p>Total</p>
+          <p>R$ {formatToDecimal(total + precoEntrega)}</p>
+        </div>
+        <button>Confirmar pedido</button>
       </div>
-      <div className="row">
-        <p>Entrega</p>
-        <p>R$ 9,70</p>
-      </div>
-      <div className="row">
-        <p>Total</p>
-        <p>R$ 33,20</p>
-      </div>
-      <button>Confirmar pedido</button>
     </S.NewCheckoutForm>
   );
 };

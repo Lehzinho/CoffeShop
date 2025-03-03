@@ -6,10 +6,13 @@ interface ShoppingCartProps {
   items?: number;
 }
 
-export const ShoppingCart = ({ items, type = "purple" }: ShoppingCartProps) => {
+export const ShoppingCart = ({
+  items = 0,
+  type = "purple",
+}: ShoppingCartProps) => {
   return (
     <S.ShoppingCart $type={type}>
-      {items && <p className="amount">{0}</p>}
+      {items > 0 && <p className="amount">{items}</p>}
       <Cart size={22} weight="fill" />
     </S.ShoppingCart>
   );
