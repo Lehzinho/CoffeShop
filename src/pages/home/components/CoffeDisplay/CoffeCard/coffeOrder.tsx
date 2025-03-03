@@ -1,5 +1,5 @@
+import { CoffeOrderQdt } from "@/components/CoffeOrderQdt";
 import * as S from "./styles";
-import { CoffeOrderQdt } from "./coffeOrderQdt";
 import { ShoppingCart } from "@/components/shoppingCart";
 interface CoffeOrderProps {
   price: number;

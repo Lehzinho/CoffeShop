@@ -38,7 +38,7 @@ export const cartReducer = (state: CartState, action: any) => {
 
       return produce(state, (draft) => {
         draft.order[coffeIndex].quantidade++;
-        draft.total = draft.total + draft.order[coffeIndex].price;
+        draft.total += draft.order[coffeIndex].price;
       });
     }
     case ActionTypes.REMOVE_COFFE: {
@@ -49,7 +49,7 @@ export const cartReducer = (state: CartState, action: any) => {
       if (coffeIndex < 0) return state;
 
       return produce(state, (draft) => {
-        draft.total = draft.total - draft.order[coffeIndex].price;
+        draft.total -= draft.order[coffeIndex].price;
         if (draft.order[coffeIndex].quantidade > 1) {
           draft.order[coffeIndex].quantidade--;
         } else {

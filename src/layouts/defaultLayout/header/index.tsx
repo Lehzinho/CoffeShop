@@ -12,7 +12,7 @@ export const Header = () => {
           <MapPin size={22} weight="fill" />
           Porto Alegre, RS
         </p>
-        <NavLink to="/">
+        <NavLink to="/checkout">
           <ShoppingCart type="yellow" />
         </NavLink>
       </div>
