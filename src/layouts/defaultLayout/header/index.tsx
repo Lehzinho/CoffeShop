@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import * as S from "./styles";
 import Logo from "@/assets/images/Logo.svg?react";
 import { MapPin } from "@phosphor-icons/react";
@@ -9,7 +9,9 @@ export const Header = () => {
   const { items } = cart;
   return (
     <S.Header>
-      <Logo />
+      <Link to={"/"}>
+        <Logo />
+      </Link>
       <div>
         <p>
           <MapPin size={22} weight="fill" />

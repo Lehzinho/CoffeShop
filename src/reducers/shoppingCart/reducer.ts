@@ -76,6 +76,14 @@ export const cartReducer = (state: CartState, action: any) => {
         draft.order.splice(coffeIndex, 1);
       });
     }
+    case ActionTypes.RESET_COFFES: {
+      console.log("oi");
+      return produce(state, (draft) => {
+        draft.total = 0;
+        draft.items = 0;
+        draft.order = [];
+      });
+    }
     default:
       return state;
   }

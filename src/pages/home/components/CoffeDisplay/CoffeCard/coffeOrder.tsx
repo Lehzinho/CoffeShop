@@ -12,8 +12,6 @@ interface CoffeOrderProps {
 export const CoffeOrder = ({ price, id }: CoffeOrderProps) => {
   const { cart } = useShoppingCart();
 
-  const cupsOfCoffes = cart.order.find((coffe) => coffe.id === id);
-  const amount = cupsOfCoffes ? cupsOfCoffes.quantidade : 0;
   return (
     <S.CoffeOrder>
       <p>
@@ -22,7 +20,7 @@ export const CoffeOrder = ({ price, id }: CoffeOrderProps) => {
       <div>
         <CoffeOrderQdt id={id} />
         <Link to={cart.total > 0 ? "/checkout" : "/"}>
-          <ShoppingCart items={amount} />
+          <ShoppingCart />
         </Link>
       </div>
     </S.CoffeOrder>

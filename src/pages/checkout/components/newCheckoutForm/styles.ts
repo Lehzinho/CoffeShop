@@ -12,7 +12,9 @@ export const NewCheckoutForm = styled.div`
 
   border-radius: 6px 44px;
   background: ${({ theme }) => theme["base-card"]};
-
+  & > p {
+    margin: 0 auto;
+  }
   hr {
     margin: 24px 0;
     stroke-width: 1px;

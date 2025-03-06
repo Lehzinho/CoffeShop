@@ -37,7 +37,11 @@ export const NewPaymentForm = () => {
       </div>
       <div className="radioContainer">
         {buttonArray.map((button) => (
-          <PaymentButton {...button} {...register(button.register)} />
+          <PaymentButton
+            key={button.title}
+            {...button}
+            {...register(button.register)}
+          />
         ))}
       </div>
     </S.NewPaymentForm>

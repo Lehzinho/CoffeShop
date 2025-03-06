@@ -5,15 +5,17 @@ import * as z from "zod";
 import { FormProvider, useForm } from "react-hook-form";
 import { NewPaymentForm } from "./components/newPaymentForm";
 import { NewCheckoutForm } from "./components/newCheckoutForm";
+import { useShoppingCart } from "@/context/ShoppingCart";
+import { useNavigate } from "react-router-dom";
 
 const inputArray = [
-  { placeHolder: "CEP", gridColumn: 4, optional: false },
-  { placeHolder: "Rua", gridColumn: 12, optional: false },
-  { placeHolder: "Número", gridColumn: 4, optional: false },
-  { placeHolder: "Complemento", gridColumn: 8, optional: true },
-  { placeHolder: "Bairro", gridColumn: 4, optional: false },
-  { placeHolder: "Cidade", gridColumn: 7, optional: false },
-  { placeHolder: "UF", gridColumn: 1, optional: false },
+  { placeholder: "CEP", gridColumn: 4, optional: false },
+  { placeholder: "Rua", gridColumn: 12, optional: false },
+  { placeholder: "Número", gridColumn: 4, optional: false },
+  { placeholder: "Complemento", gridColumn: 8, optional: true },
+  { placeholder: "Bairro", gridColumn: 4, optional: false },
+  { placeholder: "Cidade", gridColumn: 7, optional: false },
+  { placeholder: "UF", gridColumn: 1, optional: false },
 ];
 
 const formCheckoutValidationSchema = z.object({
@@ -30,6 +32,8 @@ const formCheckoutValidationSchema = z.object({
 export type NewChckoutFromData = z.infer<typeof formCheckoutValidationSchema>;
 
 function Checkout() {
+  const { handleDeliveryOrder, resetCoffeCart } = useShoppingCart();
+  const navigate = useNavigate();
   const newCheckoutForm = useForm<NewChckoutFromData>({
     resolver: zodResolver(formCheckoutValidationSchema),
     defaultValues: {
@@ -44,12 +48,13 @@ function Checkout() {
     },
   });
 
-  const { handleSubmit } = newCheckoutForm;
+  const { handleSubmit, reset } = newCheckoutForm;
 
   const handleSubmitCheckout = (e: NewChckoutFromData) => {
-    console.log(e);
-
-    // reset();
+    handleDeliveryOrder(e);
+    resetCoffeCart();
+    reset();
+    navigate("/success");
   };
 
   return (

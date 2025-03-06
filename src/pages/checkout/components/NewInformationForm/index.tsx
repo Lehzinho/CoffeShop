@@ -5,7 +5,7 @@ import * as S from "./styles";
 
 type inputProps = {
   gridColumn: number;
-  placeHolder: string;
+  placeholder: string;
   optional: boolean;
 };
 
@@ -32,11 +32,12 @@ export const NewInformationForm = ({
         </div>
       </div>
       <div>
-        {inputArray.map((input) => (
+        {inputArray.map((input, index) => (
           <Input
+            key={index.toString()}
             {...input}
-            {...register(input.placeHolder)}
-            error={errors[input.placeHolder]?.message as string}
+            {...register(input.placeholder)}
+            error={errors[input.placeholder]?.message as string}
           />
         ))}
       </div>
