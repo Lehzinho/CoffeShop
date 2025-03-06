@@ -1,50 +1,62 @@
-# React + TypeScript + Vite
+# ☕ CoffeeShop - Aplicação de Catálogo de Cafés
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **CoffeeShop** é um projeto desenvolvido com **React, TypeScript e Vite**, proporcionando uma experiência moderna e otimizada para os amantes de café. Com um design sofisticado e intuitivo, esta aplicação permite aos usuários explorar uma variedade de cafés e gerenciar seus pedidos com facilidade.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-## Expanding the ESLint configuration
+- ⚛️ **React** - Biblioteca principal para a construção da interface do usuário.
+- 🔷 **TypeScript** - Tipagem estática para maior segurança e escalabilidade do código.
+- ⚡ **Vite** - Ferramenta de build rápida e eficiente.
+- 🎨 **Styled Components** - Estilização dinâmica e modular.
+- 🔄 **React Router DOM** - Gerenciamento de rotas e navegação fluida.
+- ✅ **React Hook Form + Zod** - Validação eficiente de formulários.
+- 🔄 **Immer** - Manipulação de estados de forma imutável.
+- 📦 **ESLint** - Garantia de código limpo e padronizado.
+- 🖼️ **Vite Plugin SVGR** - Importação otimizada de SVGs como componentes React.
+- 🎭 **Phosphor Icons** - Ícones modernos para uma melhor experiência visual.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## 🎯 Funcionalidades
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- 📜 Listagem de cafés com detalhes e imagens.
+- 🛒 Gerenciamento de pedidos com carrinho de compras.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🛠 Como Executar o Projeto
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/seu-usuario/coffeeshop.git
+   cd coffeeshop
+   npm install
+   npm run dev
+   http://localhost:5173
+
+## 🔍 Configuração do ESLint
+ 
+   O projeto já vem configurado com ESLint e TypeScript para manter o código limpo e padronizado. Caso precise rodar a verificação manualmente, utilize:
+
+   npm run lint
+
+## 📝 Contribuição
+Sinta-se à vontade para contribuir com melhorias! Para isso:
+
+Faça um fork do repositório.
+Crie uma branch com sua feature (git checkout -b minha-feature).
+Faça o commit das alterações (git commit -m 'Adiciona nova funcionalidade').
+Faça o push para a branch (git push origin minha-feature).
+Abra um pull request.
+
+Desenvolvido com ❤️ e muito café ☕.
+
+
+
+
+
+
+
+
+
+
