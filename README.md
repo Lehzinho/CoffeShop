@@ -1,62 +1,60 @@
-# ☕ CoffeeShop - Aplicação de Catálogo de Cafés
+# ☕ CoffeeShop - Coffee Catalog Application  
 
-O **CoffeeShop** é um projeto desenvolvido com **React, TypeScript e Vite**, proporcionando uma experiência moderna e otimizada para os amantes de café. Com um design sofisticado e intuitivo, esta aplicação permite aos usuários explorar uma variedade de cafés e gerenciar seus pedidos com facilidade.
+**CoffeeShop** is a project developed with **React, TypeScript, and Vite**, providing a modern and optimized experience for coffee lovers. With a sophisticated and intuitive design, this application allows users to explore a variety of coffees and easily manage their orders.  
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Technologies Used  
 
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+This project was developed using the following technologies:  
 
-- ⚛️ **React** - Biblioteca principal para a construção da interface do usuário.
-- 🔷 **TypeScript** - Tipagem estática para maior segurança e escalabilidade do código.
-- ⚡ **Vite** - Ferramenta de build rápida e eficiente.
-- 🎨 **Styled Components** - Estilização dinâmica e modular.
-- 🔄 **React Router DOM** - Gerenciamento de rotas e navegação fluida.
-- ✅ **React Hook Form + Zod** - Validação eficiente de formulários.
-- 🔄 **Immer** - Manipulação de estados de forma imutável.
-- 📦 **ESLint** - Garantia de código limpo e padronizado.
-- 🖼️ **Vite Plugin SVGR** - Importação otimizada de SVGs como componentes React.
-- 🎭 **Phosphor Icons** - Ícones modernos para uma melhor experiência visual.
+- ⛒️ **React** - Main library for building the user interface.  
+- 💠 **TypeScript** - Static typing for greater security and scalability of the code.  
+- ⚡ **Vite** - Fast and efficient build tool.  
+- 🎨 **Styled Components** - Dynamic and modular styling.  
+- 🔄 **React Router DOM** - Route management and smooth navigation.  
+- ✅ **React Hook Form + Zod** - Efficient form validation.  
+- 🔄 **Immer** - Immutable state manipulation.  
+- 🛋️ **ESLint** - Ensures clean and standardized code.  
+- 🏷️ **Vite Plugin SVGR** - Optimized import of SVGs as React components.  
+- 🎭 **Phosphor Icons** - Modern icons for a better visual experience.  
 
+## 🎯 Features  
 
-## 🎯 Funcionalidades
+- 📝 Coffee listing with details and images.  
+- 🛒 Order management with a shopping cart.  
 
-- 📜 Listagem de cafés com detalhes e imagens.
-- 🛒 Gerenciamento de pedidos com carrinho de compras.
+## 🛠 How to Run the Project  
 
-
-## 🛠 Como Executar o Projeto
-
-1. **Clone o repositório**
+1. **Clone the repository**  
    ```bash
-   git clone https://github.com/seu-usuario/coffeeshop.git
+   git clone https://github.com/your-username/coffeeshop.git
    cd coffeeshop
    npm install
    npm run dev
+   ```
+
+2. **Access in the browser**  
+   ```
    http://localhost:5173
+   ```
 
-## 🔍 Configuração do ESLint
- 
-   O projeto já vem configurado com ESLint e TypeScript para manter o código limpo e padronizado. Caso precise rodar a verificação manualmente, utilize:
+## 🔍 ESLint Configuration  
 
-   npm run lint
+The project is already configured with **ESLint and TypeScript** to keep the code clean and standardized. If you need to run the verification manually, use:  
 
-## 📝 Contribuição
-Sinta-se à vontade para contribuir com melhorias! Para isso:
+```bash
+npm run lint
+```
 
-Faça um fork do repositório.
-Crie uma branch com sua feature (git checkout -b minha-feature).
-Faça o commit das alterações (git commit -m 'Adiciona nova funcionalidade').
-Faça o push para a branch (git push origin minha-feature).
-Abra um pull request.
+## 📝 Contribution  
 
-Desenvolvido com ❤️ e muito café ☕.
+Feel free to contribute with improvements! To do so:  
 
+1. Fork the repository.  
+2. Create a branch for your feature (`git checkout -b my-feature`).  
+3. Commit the changes (`git commit -m 'Add new feature'`).  
+4. Push to the branch (`git push origin my-feature`).  
+5. Open a **pull request**.  
 
+---
 
-
-
-
-
-
-
-
+Developed with ❤️ and lots of coffee ☕.
